@@ -1,0 +1,34 @@
+{
+    "name": "Astro App Boilerplate",
+    "dockerFile": "Dockerfile",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    "postCreateUser": "node",
+    "postCreateCommand": "bun install && (bun pm trust --all || true)",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Gruntfuggly.todo-tree",
+                "YoavBls.pretty-ts-errors",
+                "astro-build.astro-vscode",
+                "better-ts-errors.better-ts-errors",
+                "bradlc.vscode-tailwindcss",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "henriiik.vscode-sort",
+                "mikestead.dotenv",
+                "neotan.vscode-auto-restart-typescript-eslint-servers",
+                "streetsidesoftware.code-spell-checker",
+                "wayou.vscode-todo-highlight",
+                "wix.vscode-import-cost"
+            ],
+            "settings": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git": {},
+        "ghcr.io/devcontainers/features/github-cli": {}
+    }
+}

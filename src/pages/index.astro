@@ -1,0 +1,18 @@
+---
+import VisibleContent from "@/components/visible-content";
+import Layout from "@/layouts/base.astro";
+---
+
+<script>
+    // React components cannot be linted when used within an Astro file when
+    // `<script>` tags are present.
+</script>
+
+<Layout>
+    <p>
+        There should be content below this line if you passed the visible
+        property to the below component:
+    </p>
+
+    <VisibleContent visible />
+</Layout>
